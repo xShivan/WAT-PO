@@ -1,0 +1,1 @@
+Zadanie: Stworzyæ program w C++, którego klasa reprezentuje macierz i wykonuje na niej operacje mno¿enia i dodawania macierzy.
