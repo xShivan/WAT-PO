@@ -20,6 +20,7 @@ public:
 	String(char *input);
 	~String();
 	String operator+ (const String operand);
+	bool operator== (const String operand);
 	void Display();
 };
 
@@ -60,6 +61,19 @@ String String::operator+ (const String operand2)
 	return result;
 }
 
+bool String::operator==(String operand2)
+{
+	String operand1 = *this;
+	int i = 0;
+	bool err = false;
+	while (operand1.contents[i] != '\0' && operand2.contents[i] != '\0' && !err)
+	{
+		i++;
+		if (operand1.contents[i] != operand2.contents[i]) err = true;
+	}
+	return !err;
+}
+
 void String::Display()
 {
 	cout << contents << endl;
@@ -70,11 +84,12 @@ int main()
 	cout << "Demo: przeci¹¿anie operatorów" << endl;
 	char* input1 = "Ala ma";
 	char* input2 = " kota";
-
+	char* input3 = " kota";
 	//Alokacja danych do dema
 
 	String str1(input1);
 	String str2(input2);
+	String str3(input3);
 
 	cout << "Dane wejsciowe 1: ";
 	str1.Display();
@@ -86,7 +101,24 @@ int main()
 	String result = str1 + str2;
 	cout << "Wynik konkatenacji: ";
 	result.Display();
-
+	
+	//Demo porównania
+	if (str1 == str2)
+	{
+		cout << "£añcuchy s¹ równe" << endl;
+	}
+	else
+	{
+		cout << "£añcuchy nie s¹ równe" << endl;
+	}
+	if (str2 == str3)
+	{
+		cout << "£añcuchy s¹ równe" << endl;
+	}
+	else
+	{
+		cout << "£añcuchy nie s¹ równe" << endl;
+	}
 
 	fflush(stdin);
 	getchar();
