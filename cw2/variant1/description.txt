@@ -1,0 +1,1 @@
+Zadanie: Napisaæ program w C++, który dokonuje konkatenacji dwóch ³añcuchów w postaci wskaŸniku na typ char. U¿yæ przeci¹¿ania operatorów.
