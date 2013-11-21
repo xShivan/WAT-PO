@@ -1,0 +1,1 @@
+Zadanie: Napisaæ program w C++, który dokonuje przeci¹¿enia operatorów * i % - wykona te dzia³ania odpowiednio w pêtli dodawania i pêtli odejmowania.
